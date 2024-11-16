@@ -1,10 +1,11 @@
 #include <stdio.h>
+//Time measurement
 #include <time.h>
 clock_t clock(void);
 
 void quick(int[], int, int);
 
-#define N 8000000 //ここにデータサイズを入力する
+#define N 8000000  //Enter the data size (number of elements) here
 
 void main(void){
 
@@ -21,7 +22,7 @@ void main(void){
   quick(a,0,N-1);
 
   /*
-  データサイズが小さいときはソート後を数列を出力してチェックするのも良いが、データサイズが大きくなると流石にできない
+  If the data size is small, you can output the sorted array to check it manually.
   for (k = 0; k < N; k++){
     printf("%4d",a[k]);
     printf("\n");
